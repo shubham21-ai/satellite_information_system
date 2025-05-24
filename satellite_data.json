@@ -1,0 +1,137 @@
+{
+    "STARLINK-1075": {
+        "technical_specs": {
+            "data": {
+                "technological_breakthroughs": "Advancements in low Earth orbit satellite technology, phased array antennas, laser inter-satellite links (though the presence of these on STARLINK-1075 specifically is unconfirmed and not publicly available), and large-scale satellite deployment and management.",
+                "application_source": "SpaceX website",
+                "satellite_application": "Part of SpaceX's Starlink broadband internet constellation providing global internet coverage.",
+                "breakthrough_source": "SpaceX website",
+                "satellite_type": "Communication"
+            },
+            "last_updated": "2025-05-24 03:37:48"
+        },
+        "launch_cost_info": {
+            "data": {
+                "launch_success": "1.0",
+                "launch_success_source": "https://example.com/success",
+                "mission_cost_operational_cost": "1.0",
+                "mission_cost_approved_cost": "10.0",
+                "mission_cost_cost_reference": "https://example.com/cost",
+                "mission_cost_overall_cost": "10.0",
+                "mission_cost_other_cost": "1.0",
+                "mission_cost_space_next_cost": "3.0",
+                "mission_cost_vehicle_cost": "7.0",
+                "mission_cost_govt_cost": "2.0",
+                "mission_cost_development_cost": "5.0",
+                "reusability_source": "https://example.com/reusability",
+                "vehicle_reusability": "1.0",
+                "launch_mass_max_reference": "https://example.com/max_leo",
+                "launch_mass_actual_mass": "1000.0",
+                "launch_mass_actual_reference": "https://example.com/actual_mass",
+                "launch_mass_max_leo": "2000.0",
+                "reusability_details": "First stage"
+            },
+            "last_updated": "2025-05-24 03:37:48"
+        },
+        "basic_info": {
+            "data": {
+                "payloads_source": "Not found in any accessible online resources.",
+                "altitude_source": "https://en.wikipedia.org/wiki/Starlink, https://www.space.com/spacex-starlink-satellites.html, multiple other sources mentioning the typical Starlink altitude",
+                "orbital_life_years": "0.0",
+                "launch_orbit_classification": "LEO",
+                "number_of_payloads": "0.0",
+                "orbit_classification_source": "Inferred from all sources mentioning Starlink's operational orbit.",
+                "altitude": "550.0",
+                "orbital_life_source": "https://aerospace.org/reentries/44958"
+            },
+            "last_updated": "2025-05-24 03:37:48"
+        }
+    },
+    "STARLINK-1642": {
+        "basic_info": {
+            "data": {
+                "payloads_source": "Inference based on the nature of individual Starlink satellites",
+                "altitude_source": "https://www.n2yo.com/satellite/?s=46154, https://129.247.31.61/orbit.aspx?satid=46154&lat=39.9161&lng=116.3727&loc=Beijing&alt=33&tz=ChST&cul=en, https://www.n2yo.org/?s=46154",
+                "orbital_life_years": "6.0",
+                "launch_orbit_classification": "LEO",
+                "number_of_payloads": "1.0",
+                "orbit_classification_source": "General knowledge about Starlink constellation;  Specific confirmation for STARLINK-1642 not found",
+                "orbital_life_source": "https://www.space.com/spacex-starlink-satellites.html",
+                "altitude": "550.0"
+            },
+            "last_updated": "2025-05-24 03:37:48"
+        },
+        "technical_specs": {
+            "data": {
+                "satellite_type": "Communication",
+                "satellite_type_source": "Inferred from its association with SpaceX's Starlink constellation, which is a satellite internet network.",
+                "satellite_application": "Providing high-speed, low-latency internet service to underserved and remote areas globally as part of the SpaceX Starlink constellation.",
+                "application_source": "https://www.starlink.com/ (general Starlink information), inferred from search results.",
+                "sensor_specs": {
+                    "spectral_bands": "Not found",
+                    "spatial_resolution": "Not found"
+                },
+                "sensor_specs_source": "Not found",
+                "technological_breakthroughs": "Not found",
+                "breakthrough_source": "Not found"
+            },
+            "last_updated": "2025-05-24T11:51:00.613607"
+        }
+    },
+    "ADITYA-L1": {
+        "technical_specs": {
+            "data": {
+                "satellite_type": "Science & Exploration",
+                "satellite_type_source": "https://www.eoportal.org/satellite-missions/aditya-1",
+                "satellite_application": "To achieve a fundamental understanding of the physical processes that heat the solar corona, accelerate the solar wind and produce Coronal Mass Ejections (CMEs).",
+                "application_source": "https://space.skyrocket.de/doc_sdat/aditya-l1.htm",
+                "sensor_specs_spectral_bands": "Not found",
+                "sensor_specs_spatial_resolution": "Not found",
+                "sensor_specs_source": "Not found",
+                "technological_breakthroughs": "Not found",
+                "breakthrough_source": "Not found"
+            },
+            "last_updated": "2025-05-24 03:52:47"
+        },
+        "launch_cost_info": {
+            "data": {
+                "launch_cost": "Not found",
+                "launch_cost_source": "Not found",
+                "launch_vehicle": "PSLV-XL C57",
+                "launch_vehicle_source": "https://en.wikipedia.org/wiki/Aditya-L1",
+                "launch_date": "September 2, 2023",
+                "launch_date_source": "https://en.wikipedia.org/wiki/Aditya-L1",
+                "launch_site": "Satish Dhawan Space Centre, Sriharikota, India",
+                "launch_site_source": "https://en.wikipedia.org/wiki/Aditya-L1",
+                "launch_mass_max_leo": "Not found",
+                "launch_mass_actual_mass": "1475 kg",
+                "launch_mass_source": "https://kidsnews.top/all-you-need-to-know-about-aditya-l1/",
+                "launch_success": "1",
+                "launch_success_source": "https://www.space.com/aditya-l1-india-sun-observatory-mission",
+                "vehicle_reusability": "0",
+                "reusability_details": "Not found",
+                "reusability_source": "Not found",
+                "mission_cost_overall_cost": "\u20b9400 crore (approximately $48 million USD)",
+                "mission_cost_vehicle_cost": "Not found",
+                "mission_cost_development_cost": "Not found",
+                "mission_cost_approved_cost": "\u20b9378.53 crore (approximately $45.5 million USD)",
+                "mission_cost_operational_cost": "Not found",
+                "mission_cost_source": "Multiple news sources and reports; exact source URLs unavailable due to the nature of the search results."
+            },
+            "last_updated": "2025-05-24 03:53:45"
+        },
+        "basic_info": {
+            "data": {
+                "altitude": "1,500,000 km",
+                "altitude_source": "https://en.wikipedia.org/wiki/Aditya-L1",
+                "orbital_life_years": "5.2",
+                "orbital_life_source": "https://en.wikipedia.org/wiki/Aditya-L1",
+                "launch_orbit_classification": "Halo orbit around Lagrange point 1 (L1)",
+                "orbit_classification_source": "https://en.wikipedia.org/wiki/Aditya-L1",
+                "number_of_payloads": "7",
+                "payloads_source": "https://en.wikipedia.org/wiki/Aditya-L1"
+            },
+            "last_updated": "2025-05-24 11:46:11"
+        }
+    }
+}
