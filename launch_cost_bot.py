@@ -19,6 +19,7 @@ TAVILY_API_KEY = os.getenv("TAVILY_API_KEY")
 SERPAPI_API_KEY = os.getenv("SERPAPI_API_KEY")
 
 
+
 # Define response schemas
 response_schemas = [
     # Launch Cost Information
@@ -184,20 +185,19 @@ class LaunchCostBot:
 
         When you have all the information, end with:
         Thought: I now have all the required information
-        Final Answer: {{
-            "launch_cost": "value or 'Not found'",
-            "launch_cost_source": "source URL or 'Not found'",
-            "launch_vehicle": "value or 'Not found'",
-            "launch_vehicle_source": "source URL or 'Not found'",
-            "launch_date": "value or 'Not found'",
-            "launch_date_source": "source URL or 'Not found'",
-            "launch_site": "value or 'Not found'",
-            "launch_site_source": "source URL or 'Not found'",
-            "launch_mass": {{
-                "max_leo": "value or 'Not found'",
-                "actual_mass": "value or 'Not found'"
-            }},
-            "launch_mass_source": "source URL or 'Not found'",
+        Final Answer: {"launch_cost": "value or 'Not found'",
+                      "launch_cost_source": "source URL or 'Not found'",
+                      "launch_vehicle": "value or 'Not found'",
+                      "launch_vehicle_source": "source URL or 'Not found'",
+                      "launch_date": "value or 'Not found'",
+                      "launch_date_source": "source URL or 'Not found'",
+                      "launch_site": "value or 'Not found'",
+                      "launch_site_source": "source URL or 'Not found'",
+                      "launch_mass": {
+                          "max_leo": "value or 'Not found'",
+                          "actual_mass": "value or 'Not found'"
+                      },
+                      "launch_mass_source": "source URL or 'Not found'"",
             "launch_success": "value or 'Not found'",
             "launch_success_source": "source URL or 'Not found'",
             "vehicle_reusability": "value or 'Not found'",

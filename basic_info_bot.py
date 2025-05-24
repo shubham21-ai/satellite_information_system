@@ -87,16 +87,14 @@ class BasicInfoBot:
         Observation: (the result of the action)
         ... (this Thought/Action/Action Input/Observation can repeat N times)
         Thought: I now know the final answer
-        Final Answer: {{
-            "altitude": "value or 'Not found'",
-            "altitude_source": "source URL or 'Not found'",
-            "orbital_life_years": "value or 'Not found'",
-            "orbital_life_source": "source URL or 'Not found'",
-            "launch_orbit_classification": "value or 'Not found'",
-            "orbit_classification_source": "source URL or 'Not found'",
-            "number_of_payloads": "value or 'Not found'",
-            "payloads_source": "source URL or 'Not found'"
-        }}
+        Final Answer: {"altitude": "value or 'Not found'",
+                      "altitude_source": "source URL or 'Not found'",
+                      "orbital_life_years": "value or 'Not found'",
+                      "orbital_life_source": "source URL or 'Not found'",
+                      "launch_orbit_classification": "value or 'Not found'",
+                      "orbit_classification_source": "source URL or 'Not found'",
+                      "number_of_payloads": "value or 'Not found'",
+                      "payloads_source": "source URL or 'Not found'"}
 
         DO NOT WAIT FOR COMPLETE INFORMATION. Return whatever data you have gathered, even if some fields are missing.
         Use "Not found" for any fields where you couldn't find information.
