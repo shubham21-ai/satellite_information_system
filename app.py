@@ -121,8 +121,8 @@ if st.session_state.satellite_name:
     with tab1:
         st.subheader("Basic Information")
         basic_info_data = data_manager.get_satellite_data(satellite_name, "basic_info")
-        if basic_info_data:
-            data = basic_info_data.get("data", {})
+        if basic_info_data and "data" in basic_info_data:
+            data = basic_info_data["data"]
             df = pd.DataFrame([data]).T
             df.columns = ['Value']
             st.dataframe(df, use_container_width=True)
@@ -162,7 +162,7 @@ if st.session_state.satellite_name:
     with tab2:
         st.subheader("Technical Specifications")
         tech_specs_data = data_manager.get_satellite_data(satellite_name, "technical_specs")
-        if tech_specs_data:
+        if tech_specs_data and "data" in tech_specs_data:
             data = tech_specs_data["data"]
             df = pd.DataFrame([data]).T
             df.columns = ['Value']
@@ -203,7 +203,7 @@ if st.session_state.satellite_name:
     with tab3:
         st.subheader("Launch and Cost Information")
         launch_cost_data = data_manager.get_satellite_data(satellite_name, "launch_cost_info")
-        if launch_cost_data:
+        if launch_cost_data and "data" in launch_cost_data:
             data = launch_cost_data["data"]
             df = pd.DataFrame([data]).T
             df.columns = ['Value']
@@ -244,9 +244,9 @@ if st.session_state.satellite_name:
     with tab4:
         st.subheader("Raw JSON Data")
         all_data = {
-            "basic_info": basic_info_data["data"] if basic_info_data else {},
-            "technical_specs": tech_specs_data["data"] if tech_specs_data else {},
-            "launch_cost_info": launch_cost_data["data"] if launch_cost_data else {}
+            "basic_info": basic_info_data.get("data", {}) if basic_info_data else {},
+            "technical_specs": tech_specs_data.get("data", {}) if tech_specs_data else {},
+            "launch_cost_info": launch_cost_data.get("data", {}) if launch_cost_data else {}
         }
         if any(all_data.values()):
             st.json(all_data)
@@ -263,9 +263,9 @@ if st.session_state.satellite_name:
     # Display last updated time if available
     if any([basic_info_data, tech_specs_data, launch_cost_data]):
         latest_data = max(
-            [basic_info_data["last_updated"] if basic_info_data else None,
-             tech_specs_data["last_updated"] if tech_specs_data else None,
-             launch_cost_data["last_updated"] if launch_cost_data else None],
+            [basic_info_data.get("last_updated") if basic_info_data else None,
+             tech_specs_data.get("last_updated") if tech_specs_data else None,
+             launch_cost_data.get("last_updated") if launch_cost_data else None],
             key=lambda x: x if x is not None else ""
         )
         if latest_data:
