@@ -120,17 +120,7 @@ class TechnicalSpecsBot:
 
         When you have all the information, end with:
         Thought: I now have all the required information
-        Final Answer: {"satellite_type": "value or 'Not found'",
-                      "satellite_type_source": "source URL or 'Not found'",
-                      "satellite_application": "value or 'Not found'",
-                      "application_source": "source URL or 'Not found'",
-                      "sensor_specs": {
-                          "spectral_bands": "value or 'Not found'",
-                          "spatial_resolution": "value or 'Not found'"
-                      },
-                      "sensor_specs_source": "source URL or 'Not found'",
-                      "technological_breakthroughs": "value or 'Not found'",
-                      "breakthrough_source": "source URL or 'Not found'"}
+        Final Answer: Respond in JSON with the following keys: satellite_type, satellite_type_source, satellite_application, application_source, sensor_specs, sensor_specs_source, technological_breakthroughs, breakthrough_source. For the 'sensor_specs' key, the value should be a JSON object with keys: spectral_bands, spatial_resolution.
 
         DO NOT WAIT FOR COMPLETE INFORMATION. Return whatever data you have gathered, even if some fields are missing.
         Use "Not found" for any fields where you couldn't find information.

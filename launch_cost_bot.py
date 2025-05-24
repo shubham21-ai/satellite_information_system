@@ -169,32 +169,7 @@ class LaunchCostBot:
 
         When you have all the information, end with:
         Thought: I now have all the required information
-        Final Answer: {"launch_cost": "value or 'Not found'",
-                      "launch_cost_source": "source URL or 'Not found'",
-                      "launch_vehicle": "value or 'Not found'",
-                      "launch_vehicle_source": "source URL or 'Not found'",
-                      "launch_date": "value or 'Not found'",
-                      "launch_date_source": "source URL or 'Not found'",
-                      "launch_site": "value or 'Not found'",
-                      "launch_site_source": "source URL or 'Not found'",
-                      "launch_mass": {
-                          "max_leo": "value or 'Not found'",
-                          "actual_mass": "value or 'Not found'"
-                      },
-                      "launch_mass_source": "source URL or 'Not found'",
-                      "launch_success": "value or 'Not found'",
-                      "launch_success_source": "source URL or 'Not found'",
-                      "vehicle_reusability": "value or 'Not found'",
-                      "reusability_details": "value or 'Not found'",
-                      "reusability_source": "source URL or 'Not found'",
-                      "mission_cost": {
-                          "overall_cost": "value or 'Not found'",
-                          "vehicle_cost": "value or 'Not found'",
-                          "development_cost": "value or 'Not found'",
-                          "approved_cost": "value or 'Not found'",
-                          "operational_cost": "value or 'Not found'"
-                      },
-                      "mission_cost_source": "source URL or 'Not found'"}
+        Final Answer: Respond in JSON with the following keys: launch_cost, launch_cost_source, launch_vehicle, launch_vehicle_source, launch_date, launch_date_source, launch_site, launch_site_source, launch_mass, launch_mass_source, launch_success, launch_success_source, vehicle_reusability, reusability_details, reusability_source, mission_cost, mission_cost_source. For the 'launch_mass' key, the value should be a JSON object with keys: max_leo, actual_mass. For the 'mission_cost' key, the value should be a JSON object with keys: overall_cost, vehicle_cost, development_cost, approved_cost, operational_cost.
 
         DO NOT WAIT FOR COMPLETE INFORMATION. Return whatever data you have gathered, even if some fields are missing.
         Use "Not found" for any fields where you couldn't find information.

@@ -86,17 +86,11 @@ class BasicInfoBot:
         Action Input: (the input for the tool)
         Observation: (the result of the action)
         ... (this Thought/Action/Action Input/Observation can repeat N times)
+        
         When you have all the information, end with:
         Thought: I now know the final answer
-        Final Answer: {"altitude": "value or 'Not found'",
-                      "altitude_source": "source URL or 'Not found'",
-                      "orbital_life_years": "value or 'Not found'",
-                      "orbital_life_source": "source URL or 'Not found'",
-                      "launch_orbit_classification": "value or 'Not found'",
-                      "orbit_classification_source": "source URL or 'Not found'",
-                      "number_of_payloads": "value or 'Not found'",
-                      "payloads_source": "source URL or 'Not found'"}
-
+        Final Answer: Respond in JSON with the following keys: altitude, altitude_source, orbital_life_years, orbital_life_source, launch_orbit_classification, orbit_classification_source, number_of_payloads, payloads_source
+        
         DO NOT WAIT FOR COMPLETE INFORMATION. Return whatever data you have gathered, even if some fields are missing.
         Use "Not found" for any fields where you couldn't find information.
 
