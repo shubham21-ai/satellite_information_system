@@ -234,7 +234,15 @@ class LaunchCostBot:
         )
 
         try:
-            result = agent_executor.invoke({"input": f"Find launch and cost information for {satellite_name}"})
+            # Create input dictionary with all expected variables
+            input_dict = {
+                "input": f"Find launch and cost information for {satellite_name}",
+                "tools": tools,
+                "tool_names": [tool.name for tool in tools],
+                "agent_scratchpad": ""
+            }
+            
+            result = agent_executor.invoke(input_dict)
             try:
                 parsed_output = output_parser.parse(result["output"])
             except Exception as parse_error:

@@ -131,7 +131,15 @@ class BasicInfoBot:
         )
 
         try:
-            result = agent_executor.invoke({"input": f"Find basic information about {satellite_name}"})
+            # Create input dictionary with all expected variables
+            input_dict = {
+                "input": f"Find basic information about {satellite_name}",
+                "tools": tools,
+                "tool_names": [tool.name for tool in tools],
+                "agent_scratchpad": ""
+            }
+            
+            result = agent_executor.invoke(input_dict)
             try:
                 parsed_output = output_parser.parse(result["output"])
             except Exception as parse_error:
@@ -157,4 +165,4 @@ class BasicInfoBot:
             return parsed_output
         except Exception as e:
             print(f"Error processing satellite {satellite_name}: {str(e)}")
-            return None 
+            return None

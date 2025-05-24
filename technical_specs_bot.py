@@ -166,8 +166,16 @@ class TechnicalSpecsBot:
         )
 
         try:
+            # Create input dictionary with all expected variables
+            input_dict = {
+                "input": f"Find technical specifications for {satellite_name}",
+                "tools": tools,
+                "tool_names": [tool.name for tool in tools],
+                "agent_scratchpad": ""
+            }
+            
             # Run the agent
-            result = agent_executor.invoke({"input": f"Find technical specifications for {satellite_name}"})
+            result = agent_executor.invoke(input_dict)
             
             # Parse the output using StructuredOutputParser
             try:
