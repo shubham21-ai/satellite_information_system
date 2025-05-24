@@ -195,10 +195,6 @@ class LaunchCostBot:
                           "operational_cost": "value or 'Not found'"
                       },
                       "mission_cost_source": "source URL or 'Not found'"}
-                "operational_cost": "value or 'Not found'"
-            }}},
-            "mission_cost_source": "source URL or 'Not found'"
-        }}
 
         DO NOT WAIT FOR COMPLETE INFORMATION. Return whatever data you have gathered, even if some fields are missing.
         Use "Not found" for any fields where you couldn't find information.
@@ -211,17 +207,18 @@ class LaunchCostBot:
         
         return PromptTemplate(
             template=template,
-            input_variables=["input", "tools", "tool_names", "agent_scratchpad"],
-            partial_variables={"format_instructions": format_instructions}
+            input_variables=["input", "tools", "tool_names", "agent_scratchpad", "format_instructions"]
         )
 
     def process_satellite(self, satellite_name):
         """Process a satellite and store its launch and cost information"""
         tools = self.get_tools()
+        prompt = self.get_prompt_template()
+        
         agent = create_react_agent(
             self.llm,
             tools,
-            self.get_prompt_template()
+            prompt
         )
 
         agent_executor = AgentExecutor(
@@ -239,7 +236,8 @@ class LaunchCostBot:
                 "input": f"Find launch and cost information for {satellite_name}",
                 "tools": tools,
                 "tool_names": [tool.name for tool in tools],
-                "agent_scratchpad": ""
+                "agent_scratchpad": "",
+                "format_instructions": format_instructions
             }
             
             result = agent_executor.invoke(input_dict)

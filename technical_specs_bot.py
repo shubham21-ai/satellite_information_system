@@ -143,17 +143,18 @@ class TechnicalSpecsBot:
         
         return PromptTemplate(
             template=template,
-            input_variables=["input", "tools", "tool_names", "agent_scratchpad"],
-            partial_variables={"format_instructions": format_instructions}
+            input_variables=["input", "tools", "tool_names", "agent_scratchpad", "format_instructions"]
         )
 
     def process_satellite(self, satellite_name):
         """Process a satellite and store its technical specifications"""
         tools = self.get_tools()
+        prompt = self.get_prompt_template()
+        
         agent = create_react_agent(
             self.llm,
             tools,
-            self.get_prompt_template()
+            prompt
         )
 
         agent_executor = AgentExecutor(
@@ -171,13 +172,11 @@ class TechnicalSpecsBot:
                 "input": f"Find technical specifications for {satellite_name}",
                 "tools": tools,
                 "tool_names": [tool.name for tool in tools],
-                "agent_scratchpad": ""
+                "agent_scratchpad": "",
+                "format_instructions": format_instructions
             }
             
-            # Run the agent
             result = agent_executor.invoke(input_dict)
-            
-            # Parse the output using StructuredOutputParser
             try:
                 parsed_output = output_parser.parse(result["output"])
             except Exception as parse_error:
@@ -198,15 +197,12 @@ class TechnicalSpecsBot:
                     "breakthrough_source": "Not found"
                 }
             
-            # Store the data
             self.data_manager.append_satellite_data(
                 satellite_name,
                 "technical_specs",
                 parsed_output
             )
-            
             return parsed_output
-            
         except Exception as e:
             print(f"Error processing satellite {satellite_name}: {str(e)}")
             return None 

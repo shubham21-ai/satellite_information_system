@@ -108,17 +108,18 @@ class BasicInfoBot:
         
         return PromptTemplate(
             template=template,
-            input_variables=["input", "tools", "tool_names", "agent_scratchpad"],
-            partial_variables={"format_instructions": format_instructions}
+            input_variables=["input", "tools", "tool_names", "agent_scratchpad", "format_instructions"]
         )
 
     def process_satellite(self, satellite_name):
         """Process a satellite and store its basic information"""
         tools = self.get_tools()
+        prompt = self.get_prompt_template()
+        
         agent = create_react_agent(
             self.llm,
             tools,
-            self.get_prompt_template()
+            prompt
         )
 
         agent_executor = AgentExecutor(
@@ -136,7 +137,8 @@ class BasicInfoBot:
                 "input": f"Find basic information about {satellite_name}",
                 "tools": tools,
                 "tool_names": [tool.name for tool in tools],
-                "agent_scratchpad": ""
+                "agent_scratchpad": "",
+                "format_instructions": format_instructions
             }
             
             result = agent_executor.invoke(input_dict)
