@@ -169,30 +169,32 @@ class LaunchCostBot:
 
         When you have all the information, end with:
         Thought: I now have all the required information
-        Final Answer: {{
-            "launch_cost": "value or 'Not found'",
-            "launch_cost_source": "source URL or 'Not found'",
-            "launch_vehicle": "value or 'Not found'",
-            "launch_vehicle_source": "source URL or 'Not found'",
-            "launch_date": "value or 'Not found'",
-            "launch_date_source": "source URL or 'Not found'",
-            "launch_site": "value or 'Not found'",
-            "launch_site_source": "source URL or 'Not found'",
-            "launch_mass": {{
-                "max_leo": "value or 'Not found'",
-                "actual_mass": "value or 'Not found'"
-            }},
-            "launch_mass_source": "source URL or 'Not found'",
-            "launch_success": "value or 'Not found'",
-            "launch_success_source": "source URL or 'Not found'",
-            "vehicle_reusability": "value or 'Not found'",
-            "reusability_details": "value or 'Not found'",
-            "reusability_source": "source URL or 'Not found'",
-            "mission_cost": {{
-                "overall_cost": "value or 'Not found'",
-                "vehicle_cost": "value or 'Not found'",
-                "development_cost": "value or 'Not found'",
-                "approved_cost": "value or 'Not found'",
+        Final Answer: {"launch_cost": "value or 'Not found'",
+                      "launch_cost_source": "source URL or 'Not found'",
+                      "launch_vehicle": "value or 'Not found'",
+                      "launch_vehicle_source": "source URL or 'Not found'",
+                      "launch_date": "value or 'Not found'",
+                      "launch_date_source": "source URL or 'Not found'",
+                      "launch_site": "value or 'Not found'",
+                      "launch_site_source": "source URL or 'Not found'",
+                      "launch_mass": {
+                          "max_leo": "value or 'Not found'",
+                          "actual_mass": "value or 'Not found'"
+                      },
+                      "launch_mass_source": "source URL or 'Not found'",
+                      "launch_success": "value or 'Not found'",
+                      "launch_success_source": "source URL or 'Not found'",
+                      "vehicle_reusability": "value or 'Not found'",
+                      "reusability_details": "value or 'Not found'",
+                      "reusability_source": "source URL or 'Not found'",
+                      "mission_cost": {
+                          "overall_cost": "value or 'Not found'",
+                          "vehicle_cost": "value or 'Not found'",
+                          "development_cost": "value or 'Not found'",
+                          "approved_cost": "value or 'Not found'",
+                          "operational_cost": "value or 'Not found'"
+                      },
+                      "mission_cost_source": "source URL or 'Not found'"}
                 "operational_cost": "value or 'Not found'"
             }}},
             "mission_cost_source": "source URL or 'Not found'"

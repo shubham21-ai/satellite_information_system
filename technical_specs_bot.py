@@ -139,14 +139,6 @@ class TechnicalSpecsBot:
 
         Question: {input}
         {agent_scratchpad}
-
-        DO NOT WAIT FOR COMPLETE INFORMATION. Return whatever data you have gathered, even if some fields are missing.
-        Use "Not found" for any fields where you couldn't find information.
-
-        {format_instructions}
-
-        Question: {input}
-        {agent_scratchpad}
         """
         
         return PromptTemplate(
